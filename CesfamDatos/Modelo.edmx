@@ -1,0 +1,1506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CATEGORIA">
+          <Key>
+            <PropertyRef Name="ID_CATEGORIA" />
+          </Key>
+          <Property Name="ID_CATEGORIA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_CATEGORIA" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="ESTADO_CATEGORIA" Type="varchar2" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DETALLE_INGRESO_STOCK">
+          <Key>
+            <PropertyRef Name="ID_DETALLE_INGRESO" />
+          </Key>
+          <Property Name="ID_DETALLE_INGRESO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="STOCK_INICIAL" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="STOCK_ACTUAL" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FECHA_PRODUCCION" Type="date" Nullable="false" />
+          <Property Name="FECHA_VENCIMIENTO" Type="date" Nullable="false" />
+          <Property Name="LOTE" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="INGRESO_STOCK_ID_INGRESO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="PRODUCTO_ID_PRODUCTO" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DETALLE_RECETA">
+          <Key>
+            <PropertyRef Name="ID_DETALLE_RECETA" />
+          </Key>
+          <Property Name="RECETA_ID_RECETA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="PRODUCTO_ID_PRODUCTO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_DETALLE_RECETA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ESTADO" Type="varchar2" MaxLength="30" Nullable="false" />
+          <Property Name="CANTIDAD" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DETALLE_SALIDA_STOCK">
+          <Key>
+            <PropertyRef Name="ID_DETALLE_SALIDA" />
+          </Key>
+          <Property Name="ID_DETALLE_SALIDA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="CANTIDAD" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" Nullable="false" />
+          <Property Name="ID_SALIDA_STOCK" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_DETALLE_INGRESO" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FABRICANTE">
+          <Key>
+            <PropertyRef Name="ID_FABRICANTE" />
+          </Key>
+          <Property Name="ID_FABRICANTE" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_FABRICANTE" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="ESTADO_FABRICANTE" Type="varchar2" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="INGRESO_STOCK">
+          <Key>
+            <PropertyRef Name="ID_INGRESO" />
+          </Key>
+          <Property Name="ID_INGRESO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FECHA_INGRESO" Type="date" Nullable="false" />
+          <Property Name="USUARIO_ID_USUARIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PACIENTE">
+          <Key>
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_PACIENTE" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FECHA_NACIMIENTO" Type="date" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="APELLIDO_PATERNO" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="APELLIDO_MATERNO" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="CORREO" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="CODIGO_LIBRETA" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="RUT" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="DIRECCION" Type="varchar2" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PRODUCTO">
+          <Key>
+            <PropertyRef Name="ID_PRODUCTO" />
+          </Key>
+          <Property Name="ID_PRODUCTO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="CODIGO_PRODUCTO" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="varchar2" MaxLength="300" Nullable="false" />
+          <Property Name="COMPONENTE" Type="varchar2" MaxLength="300" Nullable="false" />
+          <Property Name="CANTIDAD_MINIMA_STOCK" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="GRAMAJE" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_PRODUCTO" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="ESTADO_PRODUCTO" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="CATEGORIA_ID_CATEGORIA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FABRICANTE_ID_FABRICANTE" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="UNIDAD_MEDIDAD" Type="varchar2" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RECETA">
+          <Key>
+            <PropertyRef Name="ID_RECETA" />
+          </Key>
+          <Property Name="ID_RECETA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ESTADO_RECETA" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="FECHA_RECETA" Type="date" Nullable="false" />
+          <Property Name="TIPO_RECETA_ID_TIPO_RECETA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="PACIENTE_ID_PACIENTE" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="DIAGNOSTICO" Type="varchar2" MaxLength="200" Nullable="false" />
+          <Property Name="CANTIDAD_TIEMPO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FECHA_ENTREGA" Type="date" Nullable="false" />
+          <Property Name="USUARIO_ID_USUARIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="CORREOENVIADO" Type="number" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="REL_PACIENTE">
+          <Key>
+            <PropertyRef Name="ID_REL_PACIENTE" />
+          </Key>
+          <Property Name="PACIENTE_ID_PACIENTE" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="TUTOR_ID_TUTOR" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_REL_PACIENTE" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="REL_RECETA">
+          <Key>
+            <PropertyRef Name="ID_REL_RECETA" />
+          </Key>
+          <Property Name="SALIDA_STOCK_ID_SALIDA_STOCK" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="RECETA_ID_RECETA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_REL_RECETA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_RETIRA" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="REL_RESERVA">
+          <Key>
+            <PropertyRef Name="ID_REL_RESERVA" />
+          </Key>
+          <Property Name="ID_REL_RESERVA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="RESERVA_ID_RESERVA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="SALIDA_STOCK_ID_SALIDA_STOCK" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RESERVA">
+          <Key>
+            <PropertyRef Name="ID_RESERVA" />
+          </Key>
+          <Property Name="ID_RESERVA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ESTADO_RESERVA" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="RECETA_ID_RECETA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="PRODUCTO_ID_PRODUCTO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="CANTIDAD_RESERVA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="USUARIO_ID_USUARIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FECHA_RESERVA" Type="date" />
+        </EntityType>
+        <EntityType Name="SALIDA_STOCK">
+          <Key>
+            <PropertyRef Name="ID_SALIDA_STOCK" />
+          </Key>
+          <Property Name="ID_SALIDA_STOCK" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FECHA" Type="date" Nullable="false" />
+          <Property Name="USUARIO_ID_USUARIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="TIPO_SALIDA_ID_TIPO_SALIDA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ESTADO" Type="varchar2" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="TIPO_RECETA">
+          <Key>
+            <PropertyRef Name="ID_TIPO_RECETA" />
+          </Key>
+          <Property Name="ID_TIPO_RECETA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_TIPO" Type="varchar2" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TIPO_SALIDA">
+          <Key>
+            <PropertyRef Name="ID_TIPO_SALIDA" />
+          </Key>
+          <Property Name="ID_TIPO_SALIDA" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_TIPO_SALIDA" Type="varchar2" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TIPO_USUARIO">
+          <Key>
+            <PropertyRef Name="ID_TIPO_USUARIO" />
+          </Key>
+          <Property Name="ID_TIPO_USUARIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_TIPO_USUARIO" Type="varchar2" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TUTOR">
+          <Key>
+            <PropertyRef Name="ID_TUTOR" />
+          </Key>
+          <Property Name="ID_TUTOR" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FECHA_NACIMIENTO" Type="date" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="APELLIDO_PATERNO" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="APELLIDO_MATERNO" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="CORREO" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="PARENTESCO" Type="varchar2" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Name="ID_USUARIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="APELLIDO_PATERNO" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="APELLIDO_MATERNO" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="USUARIO" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="CLAVE" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="FECHA_REGISTRO" Type="date" Nullable="false" />
+          <Property Name="TIPO_USUARIO_ID_TIPO_USUARIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <Association Name="DETALLE_RECETA_PRODUCTO_FK">
+          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+          <End Role="DETALLE_RECETA" Type="Self.DETALLE_RECETA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTO">
+              <PropertyRef Name="ID_PRODUCTO" />
+            </Principal>
+            <Dependent Role="DETALLE_RECETA">
+              <PropertyRef Name="PRODUCTO_ID_PRODUCTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DETALLE_RECETA_RECETA_FK">
+          <End Role="RECETA" Type="Self.RECETA" Multiplicity="1" />
+          <End Role="DETALLE_RECETA" Type="Self.DETALLE_RECETA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RECETA">
+              <PropertyRef Name="ID_RECETA" />
+            </Principal>
+            <Dependent Role="DETALLE_RECETA">
+              <PropertyRef Name="RECETA_ID_RECETA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="INGRESO_STOCK_FK">
+          <End Role="DETALLE_INGRESO_STOCK" Type="Self.DETALLE_INGRESO_STOCK" Multiplicity="1" />
+          <End Role="DETALLE_SALIDA_STOCK" Type="Self.DETALLE_SALIDA_STOCK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DETALLE_INGRESO_STOCK">
+              <PropertyRef Name="ID_DETALLE_INGRESO" />
+            </Principal>
+            <Dependent Role="DETALLE_SALIDA_STOCK">
+              <PropertyRef Name="ID_DETALLE_INGRESO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="INGRESO_STOCK_FKV2">
+          <End Role="INGRESO_STOCK" Type="Self.INGRESO_STOCK" Multiplicity="1" />
+          <End Role="DETALLE_INGRESO_STOCK" Type="Self.DETALLE_INGRESO_STOCK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INGRESO_STOCK">
+              <PropertyRef Name="ID_INGRESO" />
+            </Principal>
+            <Dependent Role="DETALLE_INGRESO_STOCK">
+              <PropertyRef Name="INGRESO_STOCK_ID_INGRESO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="INGRESO_STOCK_USUARIO_FK">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+          <End Role="INGRESO_STOCK" Type="Self.INGRESO_STOCK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="INGRESO_STOCK">
+              <PropertyRef Name="USUARIO_ID_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PRODUCTO_CATEGORIA_FK">
+          <End Role="CATEGORIA" Type="Self.CATEGORIA" Multiplicity="1" />
+          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORIA">
+              <PropertyRef Name="ID_CATEGORIA" />
+            </Principal>
+            <Dependent Role="PRODUCTO">
+              <PropertyRef Name="CATEGORIA_ID_CATEGORIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PRODUCTO_FABRICANTE_FK">
+          <End Role="FABRICANTE" Type="Self.FABRICANTE" Multiplicity="1" />
+          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FABRICANTE">
+              <PropertyRef Name="ID_FABRICANTE" />
+            </Principal>
+            <Dependent Role="PRODUCTO">
+              <PropertyRef Name="FABRICANTE_ID_FABRICANTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RECETA_PACIENTE_FK">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="RECETA" Type="Self.RECETA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="RECETA">
+              <PropertyRef Name="PACIENTE_ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RECETA_TIPO_RECETA_FK">
+          <End Role="TIPO_RECETA" Type="Self.TIPO_RECETA" Multiplicity="1" />
+          <End Role="RECETA" Type="Self.RECETA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPO_RECETA">
+              <PropertyRef Name="ID_TIPO_RECETA" />
+            </Principal>
+            <Dependent Role="RECETA">
+              <PropertyRef Name="TIPO_RECETA_ID_TIPO_RECETA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RECETA_USUARIO_FK">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+          <End Role="RECETA" Type="Self.RECETA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="RECETA">
+              <PropertyRef Name="USUARIO_ID_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REL_PACIENTE_PACIENTE_FK">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="REL_PACIENTE" Type="Self.REL_PACIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="REL_PACIENTE">
+              <PropertyRef Name="PACIENTE_ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REL_PACIENTE_TUTOR_FK">
+          <End Role="TUTOR" Type="Self.TUTOR" Multiplicity="1" />
+          <End Role="REL_PACIENTE" Type="Self.REL_PACIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TUTOR">
+              <PropertyRef Name="ID_TUTOR" />
+            </Principal>
+            <Dependent Role="REL_PACIENTE">
+              <PropertyRef Name="TUTOR_ID_TUTOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REL_RECETA_RECETA_FK">
+          <End Role="RECETA" Type="Self.RECETA" Multiplicity="1" />
+          <End Role="REL_RECETA" Type="Self.REL_RECETA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RECETA">
+              <PropertyRef Name="ID_RECETA" />
+            </Principal>
+            <Dependent Role="REL_RECETA">
+              <PropertyRef Name="RECETA_ID_RECETA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REL_RECETA_SALIDA_STOCK_FK">
+          <End Role="SALIDA_STOCK" Type="Self.SALIDA_STOCK" Multiplicity="1" />
+          <End Role="REL_RECETA" Type="Self.REL_RECETA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SALIDA_STOCK">
+              <PropertyRef Name="ID_SALIDA_STOCK" />
+            </Principal>
+            <Dependent Role="REL_RECETA">
+              <PropertyRef Name="SALIDA_STOCK_ID_SALIDA_STOCK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REL_RESERVA_RESERVA_FK1">
+          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="1" />
+          <End Role="REL_RESERVA" Type="Self.REL_RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RESERVA">
+              <PropertyRef Name="ID_RESERVA" />
+            </Principal>
+            <Dependent Role="REL_RESERVA">
+              <PropertyRef Name="RESERVA_ID_RESERVA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REL_RESERVA_SALIDA_STOCK_FK1">
+          <End Role="SALIDA_STOCK" Type="Self.SALIDA_STOCK" Multiplicity="1" />
+          <End Role="REL_RESERVA" Type="Self.REL_RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SALIDA_STOCK">
+              <PropertyRef Name="ID_SALIDA_STOCK" />
+            </Principal>
+            <Dependent Role="REL_RESERVA">
+              <PropertyRef Name="SALIDA_STOCK_ID_SALIDA_STOCK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RESERVA_PRODUCTO_FK">
+          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTO">
+              <PropertyRef Name="ID_PRODUCTO" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="PRODUCTO_ID_PRODUCTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RESERVA_RECETA_FK">
+          <End Role="RECETA" Type="Self.RECETA" Multiplicity="1" />
+          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RECETA">
+              <PropertyRef Name="ID_RECETA" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="RECETA_ID_RECETA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RESERVA_USUARIO_FK">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="USUARIO_ID_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SALIDA_STOCK_FK">
+          <End Role="SALIDA_STOCK" Type="Self.SALIDA_STOCK" Multiplicity="1" />
+          <End Role="DETALLE_SALIDA_STOCK" Type="Self.DETALLE_SALIDA_STOCK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SALIDA_STOCK">
+              <PropertyRef Name="ID_SALIDA_STOCK" />
+            </Principal>
+            <Dependent Role="DETALLE_SALIDA_STOCK">
+              <PropertyRef Name="ID_SALIDA_STOCK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SALIDA_STOCK_USUARIO_FK">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+          <End Role="SALIDA_STOCK" Type="Self.SALIDA_STOCK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="SALIDA_STOCK">
+              <PropertyRef Name="USUARIO_ID_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="STOCK_PRODUCTO_FK">
+          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+          <End Role="DETALLE_INGRESO_STOCK" Type="Self.DETALLE_INGRESO_STOCK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTO">
+              <PropertyRef Name="ID_PRODUCTO" />
+            </Principal>
+            <Dependent Role="DETALLE_INGRESO_STOCK">
+              <PropertyRef Name="PRODUCTO_ID_PRODUCTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TIPO_SALIDA_FK">
+          <End Role="TIPO_SALIDA" Type="Self.TIPO_SALIDA" Multiplicity="1" />
+          <End Role="SALIDA_STOCK" Type="Self.SALIDA_STOCK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPO_SALIDA">
+              <PropertyRef Name="ID_TIPO_SALIDA" />
+            </Principal>
+            <Dependent Role="SALIDA_STOCK">
+              <PropertyRef Name="TIPO_SALIDA_ID_TIPO_SALIDA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="USUARIO_TIPO_USUARIO_FK">
+          <End Role="TIPO_USUARIO" Type="Self.TIPO_USUARIO" Multiplicity="1" />
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPO_USUARIO">
+              <PropertyRef Name="ID_TIPO_USUARIO" />
+            </Principal>
+            <Dependent Role="USUARIO">
+              <PropertyRef Name="TIPO_USUARIO_ID_TIPO_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="CATEGORIA" EntityType="Self.CATEGORIA" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="DETALLE_INGRESO_STOCK" EntityType="Self.DETALLE_INGRESO_STOCK" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="DETALLE_RECETA" EntityType="Self.DETALLE_RECETA" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="DETALLE_SALIDA_STOCK" EntityType="Self.DETALLE_SALIDA_STOCK" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="FABRICANTE" EntityType="Self.FABRICANTE" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="INGRESO_STOCK" EntityType="Self.INGRESO_STOCK" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="PACIENTE" EntityType="Self.PACIENTE" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="PRODUCTO" EntityType="Self.PRODUCTO" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="RECETA" EntityType="Self.RECETA" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="REL_PACIENTE" EntityType="Self.REL_PACIENTE" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="REL_RECETA" EntityType="Self.REL_RECETA" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="REL_RESERVA" EntityType="Self.REL_RESERVA" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="RESERVA" EntityType="Self.RESERVA" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="SALIDA_STOCK" EntityType="Self.SALIDA_STOCK" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="TIPO_RECETA" EntityType="Self.TIPO_RECETA" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="TIPO_SALIDA" EntityType="Self.TIPO_SALIDA" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="TIPO_USUARIO" EntityType="Self.TIPO_USUARIO" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="TUTOR" EntityType="Self.TUTOR" Schema="CESFAMDATA" store:Type="Tables" />
+          <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="CESFAMDATA" store:Type="Tables" />
+          <AssociationSet Name="DETALLE_RECETA_PRODUCTO_FK" Association="Self.DETALLE_RECETA_PRODUCTO_FK">
+            <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+            <End Role="DETALLE_RECETA" EntitySet="DETALLE_RECETA" />
+          </AssociationSet>
+          <AssociationSet Name="DETALLE_RECETA_RECETA_FK" Association="Self.DETALLE_RECETA_RECETA_FK">
+            <End Role="RECETA" EntitySet="RECETA" />
+            <End Role="DETALLE_RECETA" EntitySet="DETALLE_RECETA" />
+          </AssociationSet>
+          <AssociationSet Name="INGRESO_STOCK_FK" Association="Self.INGRESO_STOCK_FK">
+            <End Role="DETALLE_INGRESO_STOCK" EntitySet="DETALLE_INGRESO_STOCK" />
+            <End Role="DETALLE_SALIDA_STOCK" EntitySet="DETALLE_SALIDA_STOCK" />
+          </AssociationSet>
+          <AssociationSet Name="INGRESO_STOCK_FKV2" Association="Self.INGRESO_STOCK_FKV2">
+            <End Role="INGRESO_STOCK" EntitySet="INGRESO_STOCK" />
+            <End Role="DETALLE_INGRESO_STOCK" EntitySet="DETALLE_INGRESO_STOCK" />
+          </AssociationSet>
+          <AssociationSet Name="INGRESO_STOCK_USUARIO_FK" Association="Self.INGRESO_STOCK_USUARIO_FK">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="INGRESO_STOCK" EntitySet="INGRESO_STOCK" />
+          </AssociationSet>
+          <AssociationSet Name="PRODUCTO_CATEGORIA_FK" Association="Self.PRODUCTO_CATEGORIA_FK">
+            <End Role="CATEGORIA" EntitySet="CATEGORIA" />
+            <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+          </AssociationSet>
+          <AssociationSet Name="PRODUCTO_FABRICANTE_FK" Association="Self.PRODUCTO_FABRICANTE_FK">
+            <End Role="FABRICANTE" EntitySet="FABRICANTE" />
+            <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+          </AssociationSet>
+          <AssociationSet Name="RECETA_PACIENTE_FK" Association="Self.RECETA_PACIENTE_FK">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="RECETA" EntitySet="RECETA" />
+          </AssociationSet>
+          <AssociationSet Name="RECETA_TIPO_RECETA_FK" Association="Self.RECETA_TIPO_RECETA_FK">
+            <End Role="TIPO_RECETA" EntitySet="TIPO_RECETA" />
+            <End Role="RECETA" EntitySet="RECETA" />
+          </AssociationSet>
+          <AssociationSet Name="RECETA_USUARIO_FK" Association="Self.RECETA_USUARIO_FK">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="RECETA" EntitySet="RECETA" />
+          </AssociationSet>
+          <AssociationSet Name="REL_PACIENTE_PACIENTE_FK" Association="Self.REL_PACIENTE_PACIENTE_FK">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="REL_PACIENTE" EntitySet="REL_PACIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="REL_PACIENTE_TUTOR_FK" Association="Self.REL_PACIENTE_TUTOR_FK">
+            <End Role="TUTOR" EntitySet="TUTOR" />
+            <End Role="REL_PACIENTE" EntitySet="REL_PACIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="REL_RECETA_RECETA_FK" Association="Self.REL_RECETA_RECETA_FK">
+            <End Role="RECETA" EntitySet="RECETA" />
+            <End Role="REL_RECETA" EntitySet="REL_RECETA" />
+          </AssociationSet>
+          <AssociationSet Name="REL_RECETA_SALIDA_STOCK_FK" Association="Self.REL_RECETA_SALIDA_STOCK_FK">
+            <End Role="SALIDA_STOCK" EntitySet="SALIDA_STOCK" />
+            <End Role="REL_RECETA" EntitySet="REL_RECETA" />
+          </AssociationSet>
+          <AssociationSet Name="REL_RESERVA_RESERVA_FK1" Association="Self.REL_RESERVA_RESERVA_FK1">
+            <End Role="RESERVA" EntitySet="RESERVA" />
+            <End Role="REL_RESERVA" EntitySet="REL_RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="REL_RESERVA_SALIDA_STOCK_FK1" Association="Self.REL_RESERVA_SALIDA_STOCK_FK1">
+            <End Role="SALIDA_STOCK" EntitySet="SALIDA_STOCK" />
+            <End Role="REL_RESERVA" EntitySet="REL_RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="RESERVA_PRODUCTO_FK" Association="Self.RESERVA_PRODUCTO_FK">
+            <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="RESERVA_RECETA_FK" Association="Self.RESERVA_RECETA_FK">
+            <End Role="RECETA" EntitySet="RECETA" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="RESERVA_USUARIO_FK" Association="Self.RESERVA_USUARIO_FK">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="SALIDA_STOCK_FK" Association="Self.SALIDA_STOCK_FK">
+            <End Role="SALIDA_STOCK" EntitySet="SALIDA_STOCK" />
+            <End Role="DETALLE_SALIDA_STOCK" EntitySet="DETALLE_SALIDA_STOCK" />
+          </AssociationSet>
+          <AssociationSet Name="SALIDA_STOCK_USUARIO_FK" Association="Self.SALIDA_STOCK_USUARIO_FK">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="SALIDA_STOCK" EntitySet="SALIDA_STOCK" />
+          </AssociationSet>
+          <AssociationSet Name="STOCK_PRODUCTO_FK" Association="Self.STOCK_PRODUCTO_FK">
+            <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+            <End Role="DETALLE_INGRESO_STOCK" EntitySet="DETALLE_INGRESO_STOCK" />
+          </AssociationSet>
+          <AssociationSet Name="TIPO_SALIDA_FK" Association="Self.TIPO_SALIDA_FK">
+            <End Role="TIPO_SALIDA" EntitySet="TIPO_SALIDA" />
+            <End Role="SALIDA_STOCK" EntitySet="SALIDA_STOCK" />
+          </AssociationSet>
+          <AssociationSet Name="USUARIO_TIPO_USUARIO_FK" Association="Self.USUARIO_TIPO_USUARIO_FK">
+            <End Role="TIPO_USUARIO" EntitySet="TIPO_USUARIO" />
+            <End Role="USUARIO" EntitySet="USUARIO" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CATEGORIA">
+          <Key>
+            <PropertyRef Name="ID_CATEGORIA" />
+          </Key>
+          <Property Name="ID_CATEGORIA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_CATEGORIA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ESTADO_CATEGORIA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="PRODUCTO" Relationship="Self.PRODUCTO_CATEGORIA_FK" FromRole="CATEGORIA" ToRole="PRODUCTO" />
+        </EntityType>
+        <EntityType Name="DETALLE_INGRESO_STOCK">
+          <Key>
+            <PropertyRef Name="ID_DETALLE_INGRESO" />
+          </Key>
+          <Property Name="ID_DETALLE_INGRESO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="STOCK_INICIAL" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="STOCK_ACTUAL" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FECHA_PRODUCCION" Type="DateTime" Nullable="false" />
+          <Property Name="FECHA_VENCIMIENTO" Type="DateTime" Nullable="false" />
+          <Property Name="LOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="INGRESO_STOCK_ID_INGRESO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="PRODUCTO_ID_PRODUCTO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <NavigationProperty Name="DETALLE_SALIDA_STOCK" Relationship="Self.INGRESO_STOCK_FK" FromRole="DETALLE_INGRESO_STOCK" ToRole="DETALLE_SALIDA_STOCK" />
+          <NavigationProperty Name="INGRESO_STOCK" Relationship="Self.INGRESO_STOCK_FKV2" FromRole="DETALLE_INGRESO_STOCK" ToRole="INGRESO_STOCK" />
+          <NavigationProperty Name="PRODUCTO" Relationship="Self.STOCK_PRODUCTO_FK" FromRole="DETALLE_INGRESO_STOCK" ToRole="PRODUCTO" />
+        </EntityType>
+        <EntityType Name="DETALLE_RECETA">
+          <Key>
+            <PropertyRef Name="ID_DETALLE_RECETA" />
+          </Key>
+          <Property Name="RECETA_ID_RECETA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="PRODUCTO_ID_PRODUCTO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_DETALLE_RECETA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ESTADO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CANTIDAD" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <NavigationProperty Name="PRODUCTO" Relationship="Self.DETALLE_RECETA_PRODUCTO_FK" FromRole="DETALLE_RECETA" ToRole="PRODUCTO" />
+          <NavigationProperty Name="RECETA" Relationship="Self.DETALLE_RECETA_RECETA_FK" FromRole="DETALLE_RECETA" ToRole="RECETA" />
+        </EntityType>
+        <EntityType Name="DETALLE_SALIDA_STOCK">
+          <Key>
+            <PropertyRef Name="ID_DETALLE_SALIDA" />
+          </Key>
+          <Property Name="ID_DETALLE_SALIDA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="CANTIDAD" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_SALIDA_STOCK" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_DETALLE_INGRESO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <NavigationProperty Name="DETALLE_INGRESO_STOCK" Relationship="Self.INGRESO_STOCK_FK" FromRole="DETALLE_SALIDA_STOCK" ToRole="DETALLE_INGRESO_STOCK" />
+          <NavigationProperty Name="SALIDA_STOCK" Relationship="Self.SALIDA_STOCK_FK" FromRole="DETALLE_SALIDA_STOCK" ToRole="SALIDA_STOCK" />
+        </EntityType>
+        <EntityType Name="FABRICANTE">
+          <Key>
+            <PropertyRef Name="ID_FABRICANTE" />
+          </Key>
+          <Property Name="ID_FABRICANTE" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_FABRICANTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ESTADO_FABRICANTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="PRODUCTO" Relationship="Self.PRODUCTO_FABRICANTE_FK" FromRole="FABRICANTE" ToRole="PRODUCTO" />
+        </EntityType>
+        <EntityType Name="INGRESO_STOCK">
+          <Key>
+            <PropertyRef Name="ID_INGRESO" />
+          </Key>
+          <Property Name="ID_INGRESO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FECHA_INGRESO" Type="DateTime" Nullable="false" />
+          <Property Name="USUARIO_ID_USUARIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <NavigationProperty Name="DETALLE_INGRESO_STOCK" Relationship="Self.INGRESO_STOCK_FKV2" FromRole="INGRESO_STOCK" ToRole="DETALLE_INGRESO_STOCK" />
+          <NavigationProperty Name="USUARIO" Relationship="Self.INGRESO_STOCK_USUARIO_FK" FromRole="INGRESO_STOCK" ToRole="USUARIO" />
+        </EntityType>
+        <EntityType Name="PACIENTE">
+          <Key>
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_PACIENTE" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FECHA_NACIMIENTO" Type="DateTime" Nullable="false" />
+          <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APELLIDO_PATERNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APELLIDO_MATERNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CORREO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CODIGO_LIBRETA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RUT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DIRECCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="RECETA" Relationship="Self.RECETA_PACIENTE_FK" FromRole="PACIENTE" ToRole="RECETA" />
+          <NavigationProperty Name="REL_PACIENTE" Relationship="Self.REL_PACIENTE_PACIENTE_FK" FromRole="PACIENTE" ToRole="REL_PACIENTE" />
+        </EntityType>
+        <EntityType Name="PRODUCTO">
+          <Key>
+            <PropertyRef Name="ID_PRODUCTO" />
+          </Key>
+          <Property Name="ID_PRODUCTO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="CODIGO_PRODUCTO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="COMPONENTE" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CANTIDAD_MINIMA_STOCK" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="GRAMAJE" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_PRODUCTO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ESTADO_PRODUCTO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CATEGORIA_ID_CATEGORIA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FABRICANTE_ID_FABRICANTE" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="UNIDAD_MEDIDAD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CATEGORIA" Relationship="Self.PRODUCTO_CATEGORIA_FK" FromRole="PRODUCTO" ToRole="CATEGORIA" />
+          <NavigationProperty Name="DETALLE_INGRESO_STOCK" Relationship="Self.STOCK_PRODUCTO_FK" FromRole="PRODUCTO" ToRole="DETALLE_INGRESO_STOCK" />
+          <NavigationProperty Name="DETALLE_RECETA" Relationship="Self.DETALLE_RECETA_PRODUCTO_FK" FromRole="PRODUCTO" ToRole="DETALLE_RECETA" />
+          <NavigationProperty Name="FABRICANTE" Relationship="Self.PRODUCTO_FABRICANTE_FK" FromRole="PRODUCTO" ToRole="FABRICANTE" />
+          <NavigationProperty Name="RESERVA" Relationship="Self.RESERVA_PRODUCTO_FK" FromRole="PRODUCTO" ToRole="RESERVA" />
+        </EntityType>
+        <EntityType Name="RECETA">
+          <Key>
+            <PropertyRef Name="ID_RECETA" />
+          </Key>
+          <Property Name="ID_RECETA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ESTADO_RECETA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FECHA_RECETA" Type="DateTime" Nullable="false" />
+          <Property Name="TIPO_RECETA_ID_TIPO_RECETA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="PACIENTE_ID_PACIENTE" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="DIAGNOSTICO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CANTIDAD_TIEMPO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FECHA_ENTREGA" Type="DateTime" Nullable="false" />
+          <Property Name="USUARIO_ID_USUARIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <NavigationProperty Name="DETALLE_RECETA" Relationship="Self.DETALLE_RECETA_RECETA_FK" FromRole="RECETA" ToRole="DETALLE_RECETA" />
+          <NavigationProperty Name="PACIENTE" Relationship="Self.RECETA_PACIENTE_FK" FromRole="RECETA" ToRole="PACIENTE" />
+          <NavigationProperty Name="TIPO_RECETA" Relationship="Self.RECETA_TIPO_RECETA_FK" FromRole="RECETA" ToRole="TIPO_RECETA" />
+          <NavigationProperty Name="USUARIO" Relationship="Self.RECETA_USUARIO_FK" FromRole="RECETA" ToRole="USUARIO" />
+          <NavigationProperty Name="REL_RECETA" Relationship="Self.REL_RECETA_RECETA_FK" FromRole="RECETA" ToRole="REL_RECETA" />
+          <NavigationProperty Name="RESERVA" Relationship="Self.RESERVA_RECETA_FK" FromRole="RECETA" ToRole="RESERVA" />
+          <Property Name="CORREOENVIADO" Type="Decimal" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="REL_PACIENTE">
+          <Key>
+            <PropertyRef Name="ID_REL_PACIENTE" />
+          </Key>
+          <Property Name="PACIENTE_ID_PACIENTE" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="TUTOR_ID_TUTOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_REL_PACIENTE" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <NavigationProperty Name="PACIENTE" Relationship="Self.REL_PACIENTE_PACIENTE_FK" FromRole="REL_PACIENTE" ToRole="PACIENTE" />
+          <NavigationProperty Name="TUTOR" Relationship="Self.REL_PACIENTE_TUTOR_FK" FromRole="REL_PACIENTE" ToRole="TUTOR" />
+        </EntityType>
+        <EntityType Name="REL_RECETA">
+          <Key>
+            <PropertyRef Name="ID_REL_RECETA" />
+          </Key>
+          <Property Name="SALIDA_STOCK_ID_SALIDA_STOCK" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="RECETA_ID_RECETA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_REL_RECETA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_RETIRA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <NavigationProperty Name="RECETA" Relationship="Self.REL_RECETA_RECETA_FK" FromRole="REL_RECETA" ToRole="RECETA" />
+          <NavigationProperty Name="SALIDA_STOCK" Relationship="Self.REL_RECETA_SALIDA_STOCK_FK" FromRole="REL_RECETA" ToRole="SALIDA_STOCK" />
+        </EntityType>
+        <EntityType Name="RESERVA">
+          <Key>
+            <PropertyRef Name="ID_RESERVA" />
+          </Key>
+          <Property Name="ID_RESERVA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ESTADO_RESERVA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RECETA_ID_RECETA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="PRODUCTO_ID_PRODUCTO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="CANTIDAD_RESERVA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="USUARIO_ID_USUARIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <NavigationProperty Name="PRODUCTO" Relationship="Self.RESERVA_PRODUCTO_FK" FromRole="RESERVA" ToRole="PRODUCTO" />
+          <NavigationProperty Name="RECETA" Relationship="Self.RESERVA_RECETA_FK" FromRole="RESERVA" ToRole="RECETA" />
+          <NavigationProperty Name="USUARIO" Relationship="Self.RESERVA_USUARIO_FK" FromRole="RESERVA" ToRole="USUARIO" />
+          <Property Name="FECHA_RESERVA" Type="DateTime" />
+          <NavigationProperty Name="REL_RESERVA" Relationship="Model.REL_RESERVA_RESERVA_FK1" FromRole="RESERVA" ToRole="REL_RESERVA" />
+        </EntityType>
+        <EntityType Name="SALIDA_STOCK">
+          <Key>
+            <PropertyRef Name="ID_SALIDA_STOCK" />
+          </Key>
+          <Property Name="ID_SALIDA_STOCK" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FECHA" Type="DateTime" Nullable="false" />
+          <Property Name="USUARIO_ID_USUARIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="TIPO_SALIDA_ID_TIPO_SALIDA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <NavigationProperty Name="DETALLE_SALIDA_STOCK" Relationship="Self.SALIDA_STOCK_FK" FromRole="SALIDA_STOCK" ToRole="DETALLE_SALIDA_STOCK" />
+          <NavigationProperty Name="REL_RECETA" Relationship="Self.REL_RECETA_SALIDA_STOCK_FK" FromRole="SALIDA_STOCK" ToRole="REL_RECETA" />
+          <NavigationProperty Name="USUARIO" Relationship="Self.SALIDA_STOCK_USUARIO_FK" FromRole="SALIDA_STOCK" ToRole="USUARIO" />
+          <NavigationProperty Name="TIPO_SALIDA" Relationship="Self.TIPO_SALIDA_FK" FromRole="SALIDA_STOCK" ToRole="TIPO_SALIDA" />
+          <Property Name="ESTADO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="REL_RESERVA" Relationship="Model.REL_RESERVA_SALIDA_STOCK_FK1" FromRole="SALIDA_STOCK" ToRole="REL_RESERVA" />
+        </EntityType>
+        <EntityType Name="TIPO_RECETA">
+          <Key>
+            <PropertyRef Name="ID_TIPO_RECETA" />
+          </Key>
+          <Property Name="ID_TIPO_RECETA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_TIPO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="RECETA" Relationship="Self.RECETA_TIPO_RECETA_FK" FromRole="TIPO_RECETA" ToRole="RECETA" />
+        </EntityType>
+        <EntityType Name="TIPO_SALIDA">
+          <Key>
+            <PropertyRef Name="ID_TIPO_SALIDA" />
+          </Key>
+          <Property Name="ID_TIPO_SALIDA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_TIPO_SALIDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="SALIDA_STOCK" Relationship="Self.TIPO_SALIDA_FK" FromRole="TIPO_SALIDA" ToRole="SALIDA_STOCK" />
+        </EntityType>
+        <EntityType Name="TIPO_USUARIO">
+          <Key>
+            <PropertyRef Name="ID_TIPO_USUARIO" />
+          </Key>
+          <Property Name="ID_TIPO_USUARIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_TIPO_USUARIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="USUARIO" Relationship="Self.USUARIO_TIPO_USUARIO_FK" FromRole="TIPO_USUARIO" ToRole="USUARIO" />
+        </EntityType>
+        <EntityType Name="TUTOR">
+          <Key>
+            <PropertyRef Name="ID_TUTOR" />
+          </Key>
+          <Property Name="ID_TUTOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="FECHA_NACIMIENTO" Type="DateTime" Nullable="false" />
+          <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APELLIDO_PATERNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APELLIDO_MATERNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CORREO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PARENTESCO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="REL_PACIENTE" Relationship="Self.REL_PACIENTE_TUTOR_FK" FromRole="TUTOR" ToRole="REL_PACIENTE" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Name="ID_USUARIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APELLIDO_PATERNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APELLIDO_MATERNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USUARIO1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CLAVE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FECHA_REGISTRO" Type="DateTime" Nullable="false" />
+          <Property Name="TIPO_USUARIO_ID_TIPO_USUARIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <NavigationProperty Name="INGRESO_STOCK" Relationship="Self.INGRESO_STOCK_USUARIO_FK" FromRole="USUARIO" ToRole="INGRESO_STOCK" />
+          <NavigationProperty Name="RECETA" Relationship="Self.RECETA_USUARIO_FK" FromRole="USUARIO" ToRole="RECETA" />
+          <NavigationProperty Name="RESERVA" Relationship="Self.RESERVA_USUARIO_FK" FromRole="USUARIO" ToRole="RESERVA" />
+          <NavigationProperty Name="SALIDA_STOCK" Relationship="Self.SALIDA_STOCK_USUARIO_FK" FromRole="USUARIO" ToRole="SALIDA_STOCK" />
+          <NavigationProperty Name="TIPO_USUARIO" Relationship="Self.USUARIO_TIPO_USUARIO_FK" FromRole="USUARIO" ToRole="TIPO_USUARIO" />
+        </EntityType>
+        <Association Name="PRODUCTO_CATEGORIA_FK">
+          <End Role="CATEGORIA" Type="Self.CATEGORIA" Multiplicity="1" />
+          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORIA">
+              <PropertyRef Name="ID_CATEGORIA" />
+            </Principal>
+            <Dependent Role="PRODUCTO">
+              <PropertyRef Name="CATEGORIA_ID_CATEGORIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="INGRESO_STOCK_FK">
+          <End Role="DETALLE_INGRESO_STOCK" Type="Self.DETALLE_INGRESO_STOCK" Multiplicity="1" />
+          <End Role="DETALLE_SALIDA_STOCK" Type="Self.DETALLE_SALIDA_STOCK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DETALLE_INGRESO_STOCK">
+              <PropertyRef Name="ID_DETALLE_INGRESO" />
+            </Principal>
+            <Dependent Role="DETALLE_SALIDA_STOCK">
+              <PropertyRef Name="ID_DETALLE_INGRESO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="INGRESO_STOCK_FKV2">
+          <End Role="INGRESO_STOCK" Type="Self.INGRESO_STOCK" Multiplicity="1" />
+          <End Role="DETALLE_INGRESO_STOCK" Type="Self.DETALLE_INGRESO_STOCK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INGRESO_STOCK">
+              <PropertyRef Name="ID_INGRESO" />
+            </Principal>
+            <Dependent Role="DETALLE_INGRESO_STOCK">
+              <PropertyRef Name="INGRESO_STOCK_ID_INGRESO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="STOCK_PRODUCTO_FK">
+          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+          <End Role="DETALLE_INGRESO_STOCK" Type="Self.DETALLE_INGRESO_STOCK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTO">
+              <PropertyRef Name="ID_PRODUCTO" />
+            </Principal>
+            <Dependent Role="DETALLE_INGRESO_STOCK">
+              <PropertyRef Name="PRODUCTO_ID_PRODUCTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DETALLE_RECETA_PRODUCTO_FK">
+          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+          <End Role="DETALLE_RECETA" Type="Self.DETALLE_RECETA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTO">
+              <PropertyRef Name="ID_PRODUCTO" />
+            </Principal>
+            <Dependent Role="DETALLE_RECETA">
+              <PropertyRef Name="PRODUCTO_ID_PRODUCTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DETALLE_RECETA_RECETA_FK">
+          <End Role="RECETA" Type="Self.RECETA" Multiplicity="1" />
+          <End Role="DETALLE_RECETA" Type="Self.DETALLE_RECETA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RECETA">
+              <PropertyRef Name="ID_RECETA" />
+            </Principal>
+            <Dependent Role="DETALLE_RECETA">
+              <PropertyRef Name="RECETA_ID_RECETA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SALIDA_STOCK_FK">
+          <End Role="SALIDA_STOCK" Type="Self.SALIDA_STOCK" Multiplicity="1" />
+          <End Role="DETALLE_SALIDA_STOCK" Type="Self.DETALLE_SALIDA_STOCK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SALIDA_STOCK">
+              <PropertyRef Name="ID_SALIDA_STOCK" />
+            </Principal>
+            <Dependent Role="DETALLE_SALIDA_STOCK">
+              <PropertyRef Name="ID_SALIDA_STOCK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PRODUCTO_FABRICANTE_FK">
+          <End Role="FABRICANTE" Type="Self.FABRICANTE" Multiplicity="1" />
+          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FABRICANTE">
+              <PropertyRef Name="ID_FABRICANTE" />
+            </Principal>
+            <Dependent Role="PRODUCTO">
+              <PropertyRef Name="FABRICANTE_ID_FABRICANTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="INGRESO_STOCK_USUARIO_FK">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+          <End Role="INGRESO_STOCK" Type="Self.INGRESO_STOCK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="INGRESO_STOCK">
+              <PropertyRef Name="USUARIO_ID_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RECETA_PACIENTE_FK">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="RECETA" Type="Self.RECETA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="RECETA">
+              <PropertyRef Name="PACIENTE_ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REL_PACIENTE_PACIENTE_FK">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="REL_PACIENTE" Type="Self.REL_PACIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="REL_PACIENTE">
+              <PropertyRef Name="PACIENTE_ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RESERVA_PRODUCTO_FK">
+          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTO">
+              <PropertyRef Name="ID_PRODUCTO" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="PRODUCTO_ID_PRODUCTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RECETA_TIPO_RECETA_FK">
+          <End Role="TIPO_RECETA" Type="Self.TIPO_RECETA" Multiplicity="1" />
+          <End Role="RECETA" Type="Self.RECETA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPO_RECETA">
+              <PropertyRef Name="ID_TIPO_RECETA" />
+            </Principal>
+            <Dependent Role="RECETA">
+              <PropertyRef Name="TIPO_RECETA_ID_TIPO_RECETA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RECETA_USUARIO_FK">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+          <End Role="RECETA" Type="Self.RECETA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="RECETA">
+              <PropertyRef Name="USUARIO_ID_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REL_RECETA_RECETA_FK">
+          <End Role="RECETA" Type="Self.RECETA" Multiplicity="1" />
+          <End Role="REL_RECETA" Type="Self.REL_RECETA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RECETA">
+              <PropertyRef Name="ID_RECETA" />
+            </Principal>
+            <Dependent Role="REL_RECETA">
+              <PropertyRef Name="RECETA_ID_RECETA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RESERVA_RECETA_FK">
+          <End Role="RECETA" Type="Self.RECETA" Multiplicity="1" />
+          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RECETA">
+              <PropertyRef Name="ID_RECETA" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="RECETA_ID_RECETA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REL_PACIENTE_TUTOR_FK">
+          <End Role="TUTOR" Type="Self.TUTOR" Multiplicity="1" />
+          <End Role="REL_PACIENTE" Type="Self.REL_PACIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TUTOR">
+              <PropertyRef Name="ID_TUTOR" />
+            </Principal>
+            <Dependent Role="REL_PACIENTE">
+              <PropertyRef Name="TUTOR_ID_TUTOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REL_RECETA_SALIDA_STOCK_FK">
+          <End Role="SALIDA_STOCK" Type="Self.SALIDA_STOCK" Multiplicity="1" />
+          <End Role="REL_RECETA" Type="Self.REL_RECETA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SALIDA_STOCK">
+              <PropertyRef Name="ID_SALIDA_STOCK" />
+            </Principal>
+            <Dependent Role="REL_RECETA">
+              <PropertyRef Name="SALIDA_STOCK_ID_SALIDA_STOCK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RESERVA_USUARIO_FK">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="USUARIO_ID_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SALIDA_STOCK_USUARIO_FK">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+          <End Role="SALIDA_STOCK" Type="Self.SALIDA_STOCK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="SALIDA_STOCK">
+              <PropertyRef Name="USUARIO_ID_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TIPO_SALIDA_FK">
+          <End Role="TIPO_SALIDA" Type="Self.TIPO_SALIDA" Multiplicity="1" />
+          <End Role="SALIDA_STOCK" Type="Self.SALIDA_STOCK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPO_SALIDA">
+              <PropertyRef Name="ID_TIPO_SALIDA" />
+            </Principal>
+            <Dependent Role="SALIDA_STOCK">
+              <PropertyRef Name="TIPO_SALIDA_ID_TIPO_SALIDA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="USUARIO_TIPO_USUARIO_FK">
+          <End Role="TIPO_USUARIO" Type="Self.TIPO_USUARIO" Multiplicity="1" />
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPO_USUARIO">
+              <PropertyRef Name="ID_TIPO_USUARIO" />
+            </Principal>
+            <Dependent Role="USUARIO">
+              <PropertyRef Name="TIPO_USUARIO_ID_TIPO_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CesfamEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CATEGORIA" EntityType="Self.CATEGORIA" />
+          <EntitySet Name="DETALLE_INGRESO_STOCK" EntityType="Self.DETALLE_INGRESO_STOCK" />
+          <EntitySet Name="DETALLE_RECETA" EntityType="Self.DETALLE_RECETA" />
+          <EntitySet Name="DETALLE_SALIDA_STOCK" EntityType="Self.DETALLE_SALIDA_STOCK" />
+          <EntitySet Name="FABRICANTE" EntityType="Self.FABRICANTE" />
+          <EntitySet Name="INGRESO_STOCK" EntityType="Self.INGRESO_STOCK" />
+          <EntitySet Name="PACIENTE" EntityType="Self.PACIENTE" />
+          <EntitySet Name="PRODUCTO" EntityType="Self.PRODUCTO" />
+          <EntitySet Name="RECETA" EntityType="Self.RECETA" />
+          <EntitySet Name="REL_PACIENTE" EntityType="Self.REL_PACIENTE" />
+          <EntitySet Name="REL_RECETA" EntityType="Self.REL_RECETA" />
+          <EntitySet Name="RESERVA" EntityType="Self.RESERVA" />
+          <EntitySet Name="SALIDA_STOCK" EntityType="Self.SALIDA_STOCK" />
+          <EntitySet Name="TIPO_RECETA" EntityType="Self.TIPO_RECETA" />
+          <EntitySet Name="TIPO_SALIDA" EntityType="Self.TIPO_SALIDA" />
+          <EntitySet Name="TIPO_USUARIO" EntityType="Self.TIPO_USUARIO" />
+          <EntitySet Name="TUTOR" EntityType="Self.TUTOR" />
+          <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
+          <AssociationSet Name="PRODUCTO_CATEGORIA_FK" Association="Self.PRODUCTO_CATEGORIA_FK">
+            <End Role="CATEGORIA" EntitySet="CATEGORIA" />
+            <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+          </AssociationSet>
+          <AssociationSet Name="INGRESO_STOCK_FK" Association="Self.INGRESO_STOCK_FK">
+            <End Role="DETALLE_INGRESO_STOCK" EntitySet="DETALLE_INGRESO_STOCK" />
+            <End Role="DETALLE_SALIDA_STOCK" EntitySet="DETALLE_SALIDA_STOCK" />
+          </AssociationSet>
+          <AssociationSet Name="INGRESO_STOCK_FKV2" Association="Self.INGRESO_STOCK_FKV2">
+            <End Role="INGRESO_STOCK" EntitySet="INGRESO_STOCK" />
+            <End Role="DETALLE_INGRESO_STOCK" EntitySet="DETALLE_INGRESO_STOCK" />
+          </AssociationSet>
+          <AssociationSet Name="STOCK_PRODUCTO_FK" Association="Self.STOCK_PRODUCTO_FK">
+            <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+            <End Role="DETALLE_INGRESO_STOCK" EntitySet="DETALLE_INGRESO_STOCK" />
+          </AssociationSet>
+          <AssociationSet Name="DETALLE_RECETA_PRODUCTO_FK" Association="Self.DETALLE_RECETA_PRODUCTO_FK">
+            <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+            <End Role="DETALLE_RECETA" EntitySet="DETALLE_RECETA" />
+          </AssociationSet>
+          <AssociationSet Name="DETALLE_RECETA_RECETA_FK" Association="Self.DETALLE_RECETA_RECETA_FK">
+            <End Role="RECETA" EntitySet="RECETA" />
+            <End Role="DETALLE_RECETA" EntitySet="DETALLE_RECETA" />
+          </AssociationSet>
+          <AssociationSet Name="SALIDA_STOCK_FK" Association="Self.SALIDA_STOCK_FK">
+            <End Role="SALIDA_STOCK" EntitySet="SALIDA_STOCK" />
+            <End Role="DETALLE_SALIDA_STOCK" EntitySet="DETALLE_SALIDA_STOCK" />
+          </AssociationSet>
+          <AssociationSet Name="PRODUCTO_FABRICANTE_FK" Association="Self.PRODUCTO_FABRICANTE_FK">
+            <End Role="FABRICANTE" EntitySet="FABRICANTE" />
+            <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+          </AssociationSet>
+          <AssociationSet Name="INGRESO_STOCK_USUARIO_FK" Association="Self.INGRESO_STOCK_USUARIO_FK">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="INGRESO_STOCK" EntitySet="INGRESO_STOCK" />
+          </AssociationSet>
+          <AssociationSet Name="RECETA_PACIENTE_FK" Association="Self.RECETA_PACIENTE_FK">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="RECETA" EntitySet="RECETA" />
+          </AssociationSet>
+          <AssociationSet Name="REL_PACIENTE_PACIENTE_FK" Association="Self.REL_PACIENTE_PACIENTE_FK">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="REL_PACIENTE" EntitySet="REL_PACIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="RESERVA_PRODUCTO_FK" Association="Self.RESERVA_PRODUCTO_FK">
+            <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="RECETA_TIPO_RECETA_FK" Association="Self.RECETA_TIPO_RECETA_FK">
+            <End Role="TIPO_RECETA" EntitySet="TIPO_RECETA" />
+            <End Role="RECETA" EntitySet="RECETA" />
+          </AssociationSet>
+          <AssociationSet Name="RECETA_USUARIO_FK" Association="Self.RECETA_USUARIO_FK">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="RECETA" EntitySet="RECETA" />
+          </AssociationSet>
+          <AssociationSet Name="REL_RECETA_RECETA_FK" Association="Self.REL_RECETA_RECETA_FK">
+            <End Role="RECETA" EntitySet="RECETA" />
+            <End Role="REL_RECETA" EntitySet="REL_RECETA" />
+          </AssociationSet>
+          <AssociationSet Name="RESERVA_RECETA_FK" Association="Self.RESERVA_RECETA_FK">
+            <End Role="RECETA" EntitySet="RECETA" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="REL_PACIENTE_TUTOR_FK" Association="Self.REL_PACIENTE_TUTOR_FK">
+            <End Role="TUTOR" EntitySet="TUTOR" />
+            <End Role="REL_PACIENTE" EntitySet="REL_PACIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="REL_RECETA_SALIDA_STOCK_FK" Association="Self.REL_RECETA_SALIDA_STOCK_FK">
+            <End Role="SALIDA_STOCK" EntitySet="SALIDA_STOCK" />
+            <End Role="REL_RECETA" EntitySet="REL_RECETA" />
+          </AssociationSet>
+          <AssociationSet Name="RESERVA_USUARIO_FK" Association="Self.RESERVA_USUARIO_FK">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="SALIDA_STOCK_USUARIO_FK" Association="Self.SALIDA_STOCK_USUARIO_FK">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="SALIDA_STOCK" EntitySet="SALIDA_STOCK" />
+          </AssociationSet>
+          <AssociationSet Name="TIPO_SALIDA_FK" Association="Self.TIPO_SALIDA_FK">
+            <End Role="TIPO_SALIDA" EntitySet="TIPO_SALIDA" />
+            <End Role="SALIDA_STOCK" EntitySet="SALIDA_STOCK" />
+          </AssociationSet>
+          <AssociationSet Name="USUARIO_TIPO_USUARIO_FK" Association="Self.USUARIO_TIPO_USUARIO_FK">
+            <End Role="TIPO_USUARIO" EntitySet="TIPO_USUARIO" />
+            <End Role="USUARIO" EntitySet="USUARIO" />
+          </AssociationSet>
+          <EntitySet Name="REL_RESERVA" EntityType="Model.REL_RESERVA" />
+          <AssociationSet Name="REL_RESERVA_RESERVA_FK1" Association="Model.REL_RESERVA_RESERVA_FK1">
+            <End Role="RESERVA" EntitySet="RESERVA" />
+            <End Role="REL_RESERVA" EntitySet="REL_RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="REL_RESERVA_SALIDA_STOCK_FK1" Association="Model.REL_RESERVA_SALIDA_STOCK_FK1">
+            <End Role="SALIDA_STOCK" EntitySet="SALIDA_STOCK" />
+            <End Role="REL_RESERVA" EntitySet="REL_RESERVA" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="REL_RESERVA">
+          <Key>
+            <PropertyRef Name="ID_REL_RESERVA" />
+          </Key>
+          <Property Name="ID_REL_RESERVA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="RESERVA_ID_RESERVA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="SALIDA_STOCK_ID_SALIDA_STOCK" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <NavigationProperty Name="RESERVA" Relationship="Model.REL_RESERVA_RESERVA_FK1" FromRole="REL_RESERVA" ToRole="RESERVA" />
+          <NavigationProperty Name="SALIDA_STOCK" Relationship="Model.REL_RESERVA_SALIDA_STOCK_FK1" FromRole="REL_RESERVA" ToRole="SALIDA_STOCK" />
+        </EntityType>
+        <Association Name="REL_RESERVA_RESERVA_FK1">
+          <End Type="Model.RESERVA" Role="RESERVA" Multiplicity="1" />
+          <End Type="Model.REL_RESERVA" Role="REL_RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RESERVA">
+              <PropertyRef Name="ID_RESERVA" />
+            </Principal>
+            <Dependent Role="REL_RESERVA">
+              <PropertyRef Name="RESERVA_ID_RESERVA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REL_RESERVA_SALIDA_STOCK_FK1">
+          <End Type="Model.SALIDA_STOCK" Role="SALIDA_STOCK" Multiplicity="1" />
+          <End Type="Model.REL_RESERVA" Role="REL_RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SALIDA_STOCK">
+              <PropertyRef Name="ID_SALIDA_STOCK" />
+            </Principal>
+            <Dependent Role="REL_RESERVA">
+              <PropertyRef Name="SALIDA_STOCK_ID_SALIDA_STOCK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="CesfamEntities">
+          <EntitySetMapping Name="CATEGORIA">
+            <EntityTypeMapping TypeName="Model.CATEGORIA">
+              <MappingFragment StoreEntitySet="CATEGORIA">
+                <ScalarProperty Name="ID_CATEGORIA" ColumnName="ID_CATEGORIA" />
+                <ScalarProperty Name="NOMBRE_CATEGORIA" ColumnName="NOMBRE_CATEGORIA" />
+                <ScalarProperty Name="ESTADO_CATEGORIA" ColumnName="ESTADO_CATEGORIA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DETALLE_INGRESO_STOCK">
+            <EntityTypeMapping TypeName="Model.DETALLE_INGRESO_STOCK">
+              <MappingFragment StoreEntitySet="DETALLE_INGRESO_STOCK">
+                <ScalarProperty Name="ID_DETALLE_INGRESO" ColumnName="ID_DETALLE_INGRESO" />
+                <ScalarProperty Name="STOCK_INICIAL" ColumnName="STOCK_INICIAL" />
+                <ScalarProperty Name="STOCK_ACTUAL" ColumnName="STOCK_ACTUAL" />
+                <ScalarProperty Name="FECHA_PRODUCCION" ColumnName="FECHA_PRODUCCION" />
+                <ScalarProperty Name="FECHA_VENCIMIENTO" ColumnName="FECHA_VENCIMIENTO" />
+                <ScalarProperty Name="LOTE" ColumnName="LOTE" />
+                <ScalarProperty Name="INGRESO_STOCK_ID_INGRESO" ColumnName="INGRESO_STOCK_ID_INGRESO" />
+                <ScalarProperty Name="PRODUCTO_ID_PRODUCTO" ColumnName="PRODUCTO_ID_PRODUCTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DETALLE_RECETA">
+            <EntityTypeMapping TypeName="Model.DETALLE_RECETA">
+              <MappingFragment StoreEntitySet="DETALLE_RECETA">
+                <ScalarProperty Name="RECETA_ID_RECETA" ColumnName="RECETA_ID_RECETA" />
+                <ScalarProperty Name="PRODUCTO_ID_PRODUCTO" ColumnName="PRODUCTO_ID_PRODUCTO" />
+                <ScalarProperty Name="ID_DETALLE_RECETA" ColumnName="ID_DETALLE_RECETA" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DETALLE_SALIDA_STOCK">
+            <EntityTypeMapping TypeName="Model.DETALLE_SALIDA_STOCK">
+              <MappingFragment StoreEntitySet="DETALLE_SALIDA_STOCK">
+                <ScalarProperty Name="ID_DETALLE_SALIDA" ColumnName="ID_DETALLE_SALIDA" />
+                <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="ID_SALIDA_STOCK" ColumnName="ID_SALIDA_STOCK" />
+                <ScalarProperty Name="ID_DETALLE_INGRESO" ColumnName="ID_DETALLE_INGRESO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FABRICANTE">
+            <EntityTypeMapping TypeName="Model.FABRICANTE">
+              <MappingFragment StoreEntitySet="FABRICANTE">
+                <ScalarProperty Name="ID_FABRICANTE" ColumnName="ID_FABRICANTE" />
+                <ScalarProperty Name="NOMBRE_FABRICANTE" ColumnName="NOMBRE_FABRICANTE" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="ESTADO_FABRICANTE" ColumnName="ESTADO_FABRICANTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INGRESO_STOCK">
+            <EntityTypeMapping TypeName="Model.INGRESO_STOCK">
+              <MappingFragment StoreEntitySet="INGRESO_STOCK">
+                <ScalarProperty Name="ID_INGRESO" ColumnName="ID_INGRESO" />
+                <ScalarProperty Name="FECHA_INGRESO" ColumnName="FECHA_INGRESO" />
+                <ScalarProperty Name="USUARIO_ID_USUARIO" ColumnName="USUARIO_ID_USUARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PACIENTE">
+            <EntityTypeMapping TypeName="Model.PACIENTE">
+              <MappingFragment StoreEntitySet="PACIENTE">
+                <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+                <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO_PATERNO" ColumnName="APELLIDO_PATERNO" />
+                <ScalarProperty Name="APELLIDO_MATERNO" ColumnName="APELLIDO_MATERNO" />
+                <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+                <ScalarProperty Name="CODIGO_LIBRETA" ColumnName="CODIGO_LIBRETA" />
+                <ScalarProperty Name="RUT" ColumnName="RUT" />
+                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRODUCTO">
+            <EntityTypeMapping TypeName="Model.PRODUCTO">
+              <MappingFragment StoreEntitySet="PRODUCTO">
+                <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+                <ScalarProperty Name="CODIGO_PRODUCTO" ColumnName="CODIGO_PRODUCTO" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="COMPONENTE" ColumnName="COMPONENTE" />
+                <ScalarProperty Name="CANTIDAD_MINIMA_STOCK" ColumnName="CANTIDAD_MINIMA_STOCK" />
+                <ScalarProperty Name="GRAMAJE" ColumnName="GRAMAJE" />
+                <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+                <ScalarProperty Name="ESTADO_PRODUCTO" ColumnName="ESTADO_PRODUCTO" />
+                <ScalarProperty Name="CATEGORIA_ID_CATEGORIA" ColumnName="CATEGORIA_ID_CATEGORIA" />
+                <ScalarProperty Name="FABRICANTE_ID_FABRICANTE" ColumnName="FABRICANTE_ID_FABRICANTE" />
+                <ScalarProperty Name="UNIDAD_MEDIDAD" ColumnName="UNIDAD_MEDIDAD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RECETA">
+            <EntityTypeMapping TypeName="Model.RECETA">
+              <MappingFragment StoreEntitySet="RECETA">
+                <ScalarProperty Name="CORREOENVIADO" ColumnName="CORREOENVIADO" />
+                <ScalarProperty Name="ID_RECETA" ColumnName="ID_RECETA" />
+                <ScalarProperty Name="ESTADO_RECETA" ColumnName="ESTADO_RECETA" />
+                <ScalarProperty Name="FECHA_RECETA" ColumnName="FECHA_RECETA" />
+                <ScalarProperty Name="TIPO_RECETA_ID_TIPO_RECETA" ColumnName="TIPO_RECETA_ID_TIPO_RECETA" />
+                <ScalarProperty Name="PACIENTE_ID_PACIENTE" ColumnName="PACIENTE_ID_PACIENTE" />
+                <ScalarProperty Name="DIAGNOSTICO" ColumnName="DIAGNOSTICO" />
+                <ScalarProperty Name="CANTIDAD_TIEMPO" ColumnName="CANTIDAD_TIEMPO" />
+                <ScalarProperty Name="FECHA_ENTREGA" ColumnName="FECHA_ENTREGA" />
+                <ScalarProperty Name="USUARIO_ID_USUARIO" ColumnName="USUARIO_ID_USUARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REL_PACIENTE">
+            <EntityTypeMapping TypeName="Model.REL_PACIENTE">
+              <MappingFragment StoreEntitySet="REL_PACIENTE">
+                <ScalarProperty Name="PACIENTE_ID_PACIENTE" ColumnName="PACIENTE_ID_PACIENTE" />
+                <ScalarProperty Name="TUTOR_ID_TUTOR" ColumnName="TUTOR_ID_TUTOR" />
+                <ScalarProperty Name="ID_REL_PACIENTE" ColumnName="ID_REL_PACIENTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REL_RECETA">
+            <EntityTypeMapping TypeName="Model.REL_RECETA">
+              <MappingFragment StoreEntitySet="REL_RECETA">
+                <ScalarProperty Name="SALIDA_STOCK_ID_SALIDA_STOCK" ColumnName="SALIDA_STOCK_ID_SALIDA_STOCK" />
+                <ScalarProperty Name="RECETA_ID_RECETA" ColumnName="RECETA_ID_RECETA" />
+                <ScalarProperty Name="ID_REL_RECETA" ColumnName="ID_REL_RECETA" />
+                <ScalarProperty Name="ID_RETIRA" ColumnName="ID_RETIRA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RESERVA">
+            <EntityTypeMapping TypeName="Model.RESERVA">
+              <MappingFragment StoreEntitySet="RESERVA">
+                <ScalarProperty Name="FECHA_RESERVA" ColumnName="FECHA_RESERVA" />
+                <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />
+                <ScalarProperty Name="ESTADO_RESERVA" ColumnName="ESTADO_RESERVA" />
+                <ScalarProperty Name="RECETA_ID_RECETA" ColumnName="RECETA_ID_RECETA" />
+                <ScalarProperty Name="PRODUCTO_ID_PRODUCTO" ColumnName="PRODUCTO_ID_PRODUCTO" />
+                <ScalarProperty Name="CANTIDAD_RESERVA" ColumnName="CANTIDAD_RESERVA" />
+                <ScalarProperty Name="USUARIO_ID_USUARIO" ColumnName="USUARIO_ID_USUARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SALIDA_STOCK">
+            <EntityTypeMapping TypeName="Model.SALIDA_STOCK">
+              <MappingFragment StoreEntitySet="SALIDA_STOCK">
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="ID_SALIDA_STOCK" ColumnName="ID_SALIDA_STOCK" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="USUARIO_ID_USUARIO" ColumnName="USUARIO_ID_USUARIO" />
+                <ScalarProperty Name="TIPO_SALIDA_ID_TIPO_SALIDA" ColumnName="TIPO_SALIDA_ID_TIPO_SALIDA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPO_RECETA">
+            <EntityTypeMapping TypeName="Model.TIPO_RECETA">
+              <MappingFragment StoreEntitySet="TIPO_RECETA">
+                <ScalarProperty Name="ID_TIPO_RECETA" ColumnName="ID_TIPO_RECETA" />
+                <ScalarProperty Name="NOMBRE_TIPO" ColumnName="NOMBRE_TIPO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPO_SALIDA">
+            <EntityTypeMapping TypeName="Model.TIPO_SALIDA">
+              <MappingFragment StoreEntitySet="TIPO_SALIDA">
+                <ScalarProperty Name="ID_TIPO_SALIDA" ColumnName="ID_TIPO_SALIDA" />
+                <ScalarProperty Name="NOMBRE_TIPO_SALIDA" ColumnName="NOMBRE_TIPO_SALIDA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPO_USUARIO">
+            <EntityTypeMapping TypeName="Model.TIPO_USUARIO">
+              <MappingFragment StoreEntitySet="TIPO_USUARIO">
+                <ScalarProperty Name="ID_TIPO_USUARIO" ColumnName="ID_TIPO_USUARIO" />
+                <ScalarProperty Name="NOMBRE_TIPO_USUARIO" ColumnName="NOMBRE_TIPO_USUARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TUTOR">
+            <EntityTypeMapping TypeName="Model.TUTOR">
+              <MappingFragment StoreEntitySet="TUTOR">
+                <ScalarProperty Name="ID_TUTOR" ColumnName="ID_TUTOR" />
+                <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO_PATERNO" ColumnName="APELLIDO_PATERNO" />
+                <ScalarProperty Name="APELLIDO_MATERNO" ColumnName="APELLIDO_MATERNO" />
+                <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+                <ScalarProperty Name="PARENTESCO" ColumnName="PARENTESCO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIO">
+            <EntityTypeMapping TypeName="Model.USUARIO">
+              <MappingFragment StoreEntitySet="USUARIO">
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO_PATERNO" ColumnName="APELLIDO_PATERNO" />
+                <ScalarProperty Name="APELLIDO_MATERNO" ColumnName="APELLIDO_MATERNO" />
+                <ScalarProperty Name="USUARIO1" ColumnName="USUARIO" />
+                <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+                <ScalarProperty Name="FECHA_REGISTRO" ColumnName="FECHA_REGISTRO" />
+                <ScalarProperty Name="TIPO_USUARIO_ID_TIPO_USUARIO" ColumnName="TIPO_USUARIO_ID_TIPO_USUARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REL_RESERVA">
+            <EntityTypeMapping TypeName="Model.REL_RESERVA">
+              <MappingFragment StoreEntitySet="REL_RESERVA">
+                <ScalarProperty Name="SALIDA_STOCK_ID_SALIDA_STOCK" ColumnName="SALIDA_STOCK_ID_SALIDA_STOCK" />
+                <ScalarProperty Name="RESERVA_ID_RESERVA" ColumnName="RESERVA_ID_RESERVA" />
+                <ScalarProperty Name="ID_REL_RESERVA" ColumnName="ID_REL_RESERVA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CesfamNegocio.Acceso">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Acceso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CesfamNegocio.Categoria">
+    <Position X="7.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAIAAAAAAQAQBBAEgAAAAAAAAAABAAAAQAAA=</HashCode>
+      <FileName>Categoria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CesfamNegocio.DetalleIngresoStock">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIgAQCAAAAAAAAAAAAIAEAIgAAGAEAIIABJAAAAAUAA=</HashCode>
+      <FileName>DetalleIngresoStock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CesfamNegocio.DetalleReceta">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACEAAAAAAAAAAAAAAEAgAAEAEAAIAABAAAAAAEg=</HashCode>
+      <FileName>DetalleReceta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CesfamNegocio.DetalleSalidaStock">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAEAAAAAAAAAAAAAAAAhAAEgAAAIAAAAACAkAAA=</HashCode>
+      <FileName>DetalleSalidaStock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CesfamNegocio.Fabricante">
+    <Position X="2" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAgCAAAQAAAAAAEAAAAAhIAAAAACAAABAAAAAAAA=</HashCode>
+      <FileName>Fabricante.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CesfamNegocio.IngresoStock">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAQQAQAAAAAAAAAAAAAgAAEAAAAIAAAAAAAAAQA=</HashCode>
+      <FileName>IngresoStock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CesfamNegocio.Paciente">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAQAAAAAAAAACAAgAAiAIEAAAAIAABACAAIAAI=</HashCode>
+      <FileName>Paciente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CesfamNegocio.Producto">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAACAAEAAAAGQAEgAhAAEECACDAEAAAAAACAA=</HashCode>
+      <FileName>Producto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CesfamNegocio.Receta">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQQABQAAAAAAAQIACCAAAAiAAAAEAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Receta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CesfamNegocio.Reserva">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAACAAAAAAAAABAAAAAAAiAAEAAAAIAQBBAAAAAAA=</HashCode>
+      <FileName>Reserva.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CesfamNegocio.SalidaStock">
+    <Position X="14.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAQAAAAAAAEAAAAAAAAgAAEgAAAIAASAAAAAAAA=</HashCode>
+      <FileName>SalidaStock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CesfamNegocio.TipoReceta">
+    <Position X="16" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAQAAEAAAAAgAAAAAAAIAABAAAgAAAA=</HashCode>
+      <FileName>TipoReceta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CesfamNegocio.TipoSalida">
+    <Position X="12.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAAAAAAAAAAAAAAAAkAAAAAAAIAABAAAAAAIA=</HashCode>
+      <FileName>TipoSalida.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CesfamNegocio.TipoUsuario">
+    <Position X="9" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAIAAAAAAAAQAAAAAgAAEAAAAIAABAAAAAAAA=</HashCode>
+      <FileName>TipoUsuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CesfamNegocio.Tutor">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAgAAAAQAAAAAAgAAgAIAAAAAIAABACAAQAAA=</HashCode>
+      <FileName>Tutor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CesfamNegocio.Usuario">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAQAAICAAAAAACAAgAACAAEBAAAIAIBQCAAEEAA=</HashCode>
+      <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

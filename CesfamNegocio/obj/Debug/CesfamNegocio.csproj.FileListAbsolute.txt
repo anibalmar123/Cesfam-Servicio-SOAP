@@ -1,0 +1,54 @@
+C:\Users\anibal\documents\visual studio 2013\Projects\CesfamEscritorio\CesfamNegocio\bin\Debug\CesfamNegocio.dll
+C:\Users\anibal\documents\visual studio 2013\Projects\CesfamEscritorio\CesfamNegocio\bin\Debug\CesfamNegocio.pdb
+C:\Users\anibal\documents\visual studio 2013\Projects\CesfamEscritorio\CesfamNegocio\bin\Debug\CesfamDatos.dll
+C:\Users\anibal\documents\visual studio 2013\Projects\CesfamEscritorio\CesfamNegocio\bin\Debug\EntityFramework.dll
+C:\Users\anibal\documents\visual studio 2013\Projects\CesfamEscritorio\CesfamNegocio\bin\Debug\CesfamDatos.pdb
+C:\Users\anibal\documents\visual studio 2013\Projects\CesfamEscritorio\CesfamNegocio\bin\Debug\EntityFramework.xml
+C:\Users\anibal\documents\visual studio 2013\Projects\CesfamEscritorio\CesfamNegocio\obj\Debug\CesfamNegocio.csprojResolveAssemblyReference.cache
+C:\Users\anibal\documents\visual studio 2013\Projects\CesfamEscritorio\CesfamNegocio\obj\Debug\CesfamNegocio.dll
+C:\Users\anibal\documents\visual studio 2013\Projects\CesfamEscritorio\CesfamNegocio\obj\Debug\CesfamNegocio.pdb
+H:\CesfamEscritorio\CesfamEscritorio\CesfamNegocio\bin\Debug\CesfamNegocio.dll
+H:\CesfamEscritorio\CesfamEscritorio\CesfamNegocio\bin\Debug\CesfamNegocio.pdb
+H:\CesfamEscritorio\CesfamEscritorio\CesfamNegocio\bin\Debug\CesfamDatos.dll
+H:\CesfamEscritorio\CesfamEscritorio\CesfamNegocio\bin\Debug\EntityFramework.dll
+H:\CesfamEscritorio\CesfamEscritorio\CesfamNegocio\bin\Debug\CesfamDatos.pdb
+H:\CesfamEscritorio\CesfamEscritorio\CesfamNegocio\bin\Debug\EntityFramework.xml
+H:\CesfamEscritorio\CesfamEscritorio\CesfamNegocio\obj\Debug\CesfamNegocio.csprojResolveAssemblyReference.cache
+H:\CesfamEscritorio\CesfamEscritorio\CesfamNegocio\obj\Debug\CesfamNegocio.dll
+H:\CesfamEscritorio\CesfamEscritorio\CesfamNegocio\obj\Debug\CesfamNegocio.pdb
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\CesfamNegocio.dll
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\CesfamNegocio.pdb
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\CesfamDatos.dll
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\EntityFramework.dll
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\CesfamDatos.pdb
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\EntityFramework.xml
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\CesfamNegocio\obj\Debug\CesfamNegocio.csprojResolveAssemblyReference.cache
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\CesfamNegocio\obj\Debug\CesfamNegocio.dll
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\CesfamNegocio\obj\Debug\CesfamNegocio.pdb
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\CesfamNegocio.dll
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\CesfamNegocio.pdb
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\CesfamDatos.dll
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\EntityFramework.dll
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\CesfamDatos.pdb
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\EntityFramework.xml
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\CesfamNegocio\obj\Debug\CesfamNegocio.csprojResolveAssemblyReference.cache
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\CesfamNegocio\obj\Debug\CesfamNegocio.dll
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\CesfamNegocio\obj\Debug\CesfamNegocio.pdb
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\CesfamNegocio.dll
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\CesfamNegocio.pdb
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\CesfamDatos.dll
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\EntityFramework.dll
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\CesfamDatos.pdb
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\EntityFramework.xml
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\CesfamNegocio\obj\Debug\CesfamNegocio.csprojResolveAssemblyReference.cache
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\CesfamNegocio\obj\Debug\CesfamNegocio.dll
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\CesfamNegocio\obj\Debug\CesfamNegocio.pdb
+C:\Users\aniba\Documents\Ingenieria informatica\Analista Programador Portafolio\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\CesfamNegocio.dll
+C:\Users\aniba\Documents\Ingenieria informatica\Analista Programador Portafolio\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\CesfamNegocio.pdb
+C:\Users\aniba\Documents\Ingenieria informatica\Analista Programador Portafolio\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\CesfamDatos.dll
+C:\Users\aniba\Documents\Ingenieria informatica\Analista Programador Portafolio\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\EntityFramework.dll
+C:\Users\aniba\Documents\Ingenieria informatica\Analista Programador Portafolio\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\CesfamDatos.pdb
+C:\Users\aniba\Documents\Ingenieria informatica\Analista Programador Portafolio\Portafolio Final\CesfamWebService\CesfamNegocio\bin\Debug\EntityFramework.xml
+C:\Users\aniba\Documents\Ingenieria informatica\Analista Programador Portafolio\Portafolio Final\CesfamWebService\CesfamNegocio\obj\Debug\CesfamNegocio.csprojResolveAssemblyReference.cache
+C:\Users\aniba\Documents\Ingenieria informatica\Analista Programador Portafolio\Portafolio Final\CesfamWebService\CesfamNegocio\obj\Debug\CesfamNegocio.dll
+C:\Users\aniba\Documents\Ingenieria informatica\Analista Programador Portafolio\Portafolio Final\CesfamWebService\CesfamNegocio\obj\Debug\CesfamNegocio.pdb

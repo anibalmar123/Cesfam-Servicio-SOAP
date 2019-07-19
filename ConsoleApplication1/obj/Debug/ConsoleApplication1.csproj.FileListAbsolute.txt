@@ -1,0 +1,36 @@
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\CesfamNegocio.dll
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\CesfamDatos.dll
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\EntityFramework.dll
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\CesfamNegocio.pdb
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\CesfamDatos.pdb
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\EntityFramework.xml
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\CesfamNegocio.dll
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\CesfamDatos.dll
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\EntityFramework.dll
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\CesfamNegocio.pdb
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\CesfamDatos.pdb
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\EntityFramework.xml
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\anibal\Documents\Duoc\Quinto semestre\Portafolio\Iteración 3\Portafolio Final\CesfamWebService\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\CesfamNegocio.dll
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\CesfamDatos.dll
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\EntityFramework.dll
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\CesfamNegocio.pdb
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\CesfamDatos.pdb
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\ConsoleApplication1\bin\Debug\EntityFramework.xml
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\czamora\Downloads\20170629\Portafolio Final\CesfamWebService\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

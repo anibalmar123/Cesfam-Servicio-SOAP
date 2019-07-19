@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="CesfamEntities">
+    <EntitySetMapping Name="CATEGORIA">
+      <EntityTypeMapping TypeName="Model.CATEGORIA">
+        <MappingFragment StoreEntitySet="CATEGORIA">
+          <ScalarProperty Name="ID_CATEGORIA" ColumnName="ID_CATEGORIA" />
+          <ScalarProperty Name="NOMBRE_CATEGORIA" ColumnName="NOMBRE_CATEGORIA" />
+          <ScalarProperty Name="ESTADO_CATEGORIA" ColumnName="ESTADO_CATEGORIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLE_INGRESO_STOCK">
+      <EntityTypeMapping TypeName="Model.DETALLE_INGRESO_STOCK">
+        <MappingFragment StoreEntitySet="DETALLE_INGRESO_STOCK">
+          <ScalarProperty Name="ID_DETALLE_INGRESO" ColumnName="ID_DETALLE_INGRESO" />
+          <ScalarProperty Name="STOCK_INICIAL" ColumnName="STOCK_INICIAL" />
+          <ScalarProperty Name="STOCK_ACTUAL" ColumnName="STOCK_ACTUAL" />
+          <ScalarProperty Name="FECHA_PRODUCCION" ColumnName="FECHA_PRODUCCION" />
+          <ScalarProperty Name="FECHA_VENCIMIENTO" ColumnName="FECHA_VENCIMIENTO" />
+          <ScalarProperty Name="LOTE" ColumnName="LOTE" />
+          <ScalarProperty Name="INGRESO_STOCK_ID_INGRESO" ColumnName="INGRESO_STOCK_ID_INGRESO" />
+          <ScalarProperty Name="PRODUCTO_ID_PRODUCTO" ColumnName="PRODUCTO_ID_PRODUCTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLE_RECETA">
+      <EntityTypeMapping TypeName="Model.DETALLE_RECETA">
+        <MappingFragment StoreEntitySet="DETALLE_RECETA">
+          <ScalarProperty Name="RECETA_ID_RECETA" ColumnName="RECETA_ID_RECETA" />
+          <ScalarProperty Name="PRODUCTO_ID_PRODUCTO" ColumnName="PRODUCTO_ID_PRODUCTO" />
+          <ScalarProperty Name="ID_DETALLE_RECETA" ColumnName="ID_DETALLE_RECETA" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLE_SALIDA_STOCK">
+      <EntityTypeMapping TypeName="Model.DETALLE_SALIDA_STOCK">
+        <MappingFragment StoreEntitySet="DETALLE_SALIDA_STOCK">
+          <ScalarProperty Name="ID_DETALLE_SALIDA" ColumnName="ID_DETALLE_SALIDA" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ID_SALIDA_STOCK" ColumnName="ID_SALIDA_STOCK" />
+          <ScalarProperty Name="ID_DETALLE_INGRESO" ColumnName="ID_DETALLE_INGRESO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FABRICANTE">
+      <EntityTypeMapping TypeName="Model.FABRICANTE">
+        <MappingFragment StoreEntitySet="FABRICANTE">
+          <ScalarProperty Name="ID_FABRICANTE" ColumnName="ID_FABRICANTE" />
+          <ScalarProperty Name="NOMBRE_FABRICANTE" ColumnName="NOMBRE_FABRICANTE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ESTADO_FABRICANTE" ColumnName="ESTADO_FABRICANTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INGRESO_STOCK">
+      <EntityTypeMapping TypeName="Model.INGRESO_STOCK">
+        <MappingFragment StoreEntitySet="INGRESO_STOCK">
+          <ScalarProperty Name="ID_INGRESO" ColumnName="ID_INGRESO" />
+          <ScalarProperty Name="FECHA_INGRESO" ColumnName="FECHA_INGRESO" />
+          <ScalarProperty Name="USUARIO_ID_USUARIO" ColumnName="USUARIO_ID_USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PACIENTE">
+      <EntityTypeMapping TypeName="Model.PACIENTE">
+        <MappingFragment StoreEntitySet="PACIENTE">
+          <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+          <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO_PATERNO" ColumnName="APELLIDO_PATERNO" />
+          <ScalarProperty Name="APELLIDO_MATERNO" ColumnName="APELLIDO_MATERNO" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="CODIGO_LIBRETA" ColumnName="CODIGO_LIBRETA" />
+          <ScalarProperty Name="RUT" ColumnName="RUT" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTO">
+      <EntityTypeMapping TypeName="Model.PRODUCTO">
+        <MappingFragment StoreEntitySet="PRODUCTO">
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CODIGO_PRODUCTO" ColumnName="CODIGO_PRODUCTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="COMPONENTE" ColumnName="COMPONENTE" />
+          <ScalarProperty Name="CANTIDAD_MINIMA_STOCK" ColumnName="CANTIDAD_MINIMA_STOCK" />
+          <ScalarProperty Name="GRAMAJE" ColumnName="GRAMAJE" />
+          <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+          <ScalarProperty Name="ESTADO_PRODUCTO" ColumnName="ESTADO_PRODUCTO" />
+          <ScalarProperty Name="CATEGORIA_ID_CATEGORIA" ColumnName="CATEGORIA_ID_CATEGORIA" />
+          <ScalarProperty Name="FABRICANTE_ID_FABRICANTE" ColumnName="FABRICANTE_ID_FABRICANTE" />
+          <ScalarProperty Name="UNIDAD_MEDIDAD" ColumnName="UNIDAD_MEDIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RECETA">
+      <EntityTypeMapping TypeName="Model.RECETA">
+        <MappingFragment StoreEntitySet="RECETA">
+          <ScalarProperty Name="CORREOENVIADO" ColumnName="CORREOENVIADO" />
+          <ScalarProperty Name="ID_RECETA" ColumnName="ID_RECETA" />
+          <ScalarProperty Name="ESTADO_RECETA" ColumnName="ESTADO_RECETA" />
+          <ScalarProperty Name="FECHA_RECETA" ColumnName="FECHA_RECETA" />
+          <ScalarProperty Name="TIPO_RECETA_ID_TIPO_RECETA" ColumnName="TIPO_RECETA_ID_TIPO_RECETA" />
+          <ScalarProperty Name="PACIENTE_ID_PACIENTE" ColumnName="PACIENTE_ID_PACIENTE" />
+          <ScalarProperty Name="DIAGNOSTICO" ColumnName="DIAGNOSTICO" />
+          <ScalarProperty Name="CANTIDAD_TIEMPO" ColumnName="CANTIDAD_TIEMPO" />
+          <ScalarProperty Name="FECHA_ENTREGA" ColumnName="FECHA_ENTREGA" />
+          <ScalarProperty Name="USUARIO_ID_USUARIO" ColumnName="USUARIO_ID_USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REL_PACIENTE">
+      <EntityTypeMapping TypeName="Model.REL_PACIENTE">
+        <MappingFragment StoreEntitySet="REL_PACIENTE">
+          <ScalarProperty Name="PACIENTE_ID_PACIENTE" ColumnName="PACIENTE_ID_PACIENTE" />
+          <ScalarProperty Name="TUTOR_ID_TUTOR" ColumnName="TUTOR_ID_TUTOR" />
+          <ScalarProperty Name="ID_REL_PACIENTE" ColumnName="ID_REL_PACIENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REL_RECETA">
+      <EntityTypeMapping TypeName="Model.REL_RECETA">
+        <MappingFragment StoreEntitySet="REL_RECETA">
+          <ScalarProperty Name="SALIDA_STOCK_ID_SALIDA_STOCK" ColumnName="SALIDA_STOCK_ID_SALIDA_STOCK" />
+          <ScalarProperty Name="RECETA_ID_RECETA" ColumnName="RECETA_ID_RECETA" />
+          <ScalarProperty Name="ID_REL_RECETA" ColumnName="ID_REL_RECETA" />
+          <ScalarProperty Name="ID_RETIRA" ColumnName="ID_RETIRA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESERVA">
+      <EntityTypeMapping TypeName="Model.RESERVA">
+        <MappingFragment StoreEntitySet="RESERVA">
+          <ScalarProperty Name="FECHA_RESERVA" ColumnName="FECHA_RESERVA" />
+          <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />
+          <ScalarProperty Name="ESTADO_RESERVA" ColumnName="ESTADO_RESERVA" />
+          <ScalarProperty Name="RECETA_ID_RECETA" ColumnName="RECETA_ID_RECETA" />
+          <ScalarProperty Name="PRODUCTO_ID_PRODUCTO" ColumnName="PRODUCTO_ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD_RESERVA" ColumnName="CANTIDAD_RESERVA" />
+          <ScalarProperty Name="USUARIO_ID_USUARIO" ColumnName="USUARIO_ID_USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SALIDA_STOCK">
+      <EntityTypeMapping TypeName="Model.SALIDA_STOCK">
+        <MappingFragment StoreEntitySet="SALIDA_STOCK">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="ID_SALIDA_STOCK" ColumnName="ID_SALIDA_STOCK" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="USUARIO_ID_USUARIO" ColumnName="USUARIO_ID_USUARIO" />
+          <ScalarProperty Name="TIPO_SALIDA_ID_TIPO_SALIDA" ColumnName="TIPO_SALIDA_ID_TIPO_SALIDA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_RECETA">
+      <EntityTypeMapping TypeName="Model.TIPO_RECETA">
+        <MappingFragment StoreEntitySet="TIPO_RECETA">
+          <ScalarProperty Name="ID_TIPO_RECETA" ColumnName="ID_TIPO_RECETA" />
+          <ScalarProperty Name="NOMBRE_TIPO" ColumnName="NOMBRE_TIPO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_SALIDA">
+      <EntityTypeMapping TypeName="Model.TIPO_SALIDA">
+        <MappingFragment StoreEntitySet="TIPO_SALIDA">
+          <ScalarProperty Name="ID_TIPO_SALIDA" ColumnName="ID_TIPO_SALIDA" />
+          <ScalarProperty Name="NOMBRE_TIPO_SALIDA" ColumnName="NOMBRE_TIPO_SALIDA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_USUARIO">
+      <EntityTypeMapping TypeName="Model.TIPO_USUARIO">
+        <MappingFragment StoreEntitySet="TIPO_USUARIO">
+          <ScalarProperty Name="ID_TIPO_USUARIO" ColumnName="ID_TIPO_USUARIO" />
+          <ScalarProperty Name="NOMBRE_TIPO_USUARIO" ColumnName="NOMBRE_TIPO_USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TUTOR">
+      <EntityTypeMapping TypeName="Model.TUTOR">
+        <MappingFragment StoreEntitySet="TUTOR">
+          <ScalarProperty Name="ID_TUTOR" ColumnName="ID_TUTOR" />
+          <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO_PATERNO" ColumnName="APELLIDO_PATERNO" />
+          <ScalarProperty Name="APELLIDO_MATERNO" ColumnName="APELLIDO_MATERNO" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="PARENTESCO" ColumnName="PARENTESCO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="Model.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO_PATERNO" ColumnName="APELLIDO_PATERNO" />
+          <ScalarProperty Name="APELLIDO_MATERNO" ColumnName="APELLIDO_MATERNO" />
+          <ScalarProperty Name="USUARIO1" ColumnName="USUARIO" />
+          <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+          <ScalarProperty Name="FECHA_REGISTRO" ColumnName="FECHA_REGISTRO" />
+          <ScalarProperty Name="TIPO_USUARIO_ID_TIPO_USUARIO" ColumnName="TIPO_USUARIO_ID_TIPO_USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REL_RESERVA">
+      <EntityTypeMapping TypeName="Model.REL_RESERVA">
+        <MappingFragment StoreEntitySet="REL_RESERVA">
+          <ScalarProperty Name="SALIDA_STOCK_ID_SALIDA_STOCK" ColumnName="SALIDA_STOCK_ID_SALIDA_STOCK" />
+          <ScalarProperty Name="RESERVA_ID_RESERVA" ColumnName="RESERVA_ID_RESERVA" />
+          <ScalarProperty Name="ID_REL_RESERVA" ColumnName="ID_REL_RESERVA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

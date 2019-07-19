@@ -1,0 +1,12 @@
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\PruebasUnitarias\bin\Debug\PruebasUnitarias.exe.config
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\PruebasUnitarias\bin\Debug\PruebasUnitarias.exe
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\PruebasUnitarias\bin\Debug\PruebasUnitarias.pdb
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\PruebasUnitarias\bin\Debug\CesfamNegocio.dll
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\PruebasUnitarias\bin\Debug\CesfamDatos.dll
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\PruebasUnitarias\bin\Debug\EntityFramework.dll
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\PruebasUnitarias\bin\Debug\CesfamNegocio.pdb
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\PruebasUnitarias\bin\Debug\CesfamDatos.pdb
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\PruebasUnitarias\bin\Debug\EntityFramework.xml
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\PruebasUnitarias\obj\Debug\PruebasUnitarias.csprojResolveAssemblyReference.cache
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\PruebasUnitarias\obj\Debug\PruebasUnitarias.exe
+C:\Users\czamora\Desktop\Portafolio Final\CesfamWebService\PruebasUnitarias\obj\Debug\PruebasUnitarias.pdb
